@@ -2,5 +2,86 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "telegram-login-widget": {
+      "projectType": "library",
+      "root": "projects/telegram-login-widget",
+      "sourceRoot": "projects/telegram-login-widget/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/telegram-login-widget/tsconfig.lib.json",
+            "project": "projects/telegram-login-widget/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/telegram-login-widget/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/telegram-login-widget/src/test.ts",
+            "tsConfig": "projects/telegram-login-widget/tsconfig.spec.json",
+            "karmaConfig": "projects/telegram-login-widget/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/telegram-login-widget/tsconfig.lib.json",
+              "projects/telegram-login-widget/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "angular-telegram-login-widget": {
+      "projectType": "library",
+      "root": "projects/angular-telegram-login-widget",
+      "sourceRoot": "projects/angular-telegram-login-widget/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/angular-telegram-login-widget/tsconfig.lib.json",
+            "project": "projects/angular-telegram-login-widget/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-telegram-login-widget/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-telegram-login-widget/src/test.ts",
+            "tsConfig": "projects/angular-telegram-login-widget/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-telegram-login-widget/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-telegram-login-widget/tsconfig.lib.json",
+              "projects/angular-telegram-login-widget/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "defaultProject": "telegram-login-widget"
 }
