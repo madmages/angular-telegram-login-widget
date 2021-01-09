@@ -1,27 +1,47 @@
-# TelegramLoginWidget
+# Angular Telegram login widget
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
+It's wrapper over [Telegram login widget](https://core.telegram.org/widgets/login) for Angular 10+
 
-## Development server
+## Install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`npm i angular-telegram-login-widget`
 
-## Code scaffolding
+or by yarn
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`yarn add angular-telegram-login-widget`
 
-## Build
+## Usage
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1. Import module `AngularTelegramLoginWidgetModule` to your AppModule
+2. Use component `angular-telegram-login-widget`
 
-## Running unit tests
+## Example
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+https://stackblitz.com/edit/angular-telegram-login-wiget
 
-## Running end-to-end tests
+## Demo
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+https://angular-telegram-login-wiget.stackblitz.io
 
-## Further help
+## Component `angular-telegram-login-widget`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Configurations
+Configurations should set as attributes.
+
+| Name          | Required      | Type   |  Description  |
+| ------------- |-------------| -----|:-----|
+| botName | Yes | string | Your bot name. It's same as [Bot Username](https://core.telegram.org/widgets/login) |
+| configs | No | [WidgetConfiguration](https://github.com/madmages/angular-telegram-login-widget/blob/master/projects/angular-telegram-login-widget/src/lib/Types.ts) | Other configs for button. Like size, corner radius, write access |
+
+### Events
+
+| Name    | Emitted value|  Description  |
+| ------- | -----|:-----|
+| login | [User](https://github.com/madmages/angular-telegram-login-widget/blob/master/projects/angular-telegram-login-widget/src/lib/Types.ts) | After login success, it's emit users data |
+| load | void | Emit on success script load of telegram widget. |
+| loadError | void | Emit on error while loading script of telegram widget. |
+
+
+## License
+
+MIT

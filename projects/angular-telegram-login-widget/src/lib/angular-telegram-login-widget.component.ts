@@ -63,7 +63,7 @@ export class AngularTelegramLoginWidgetComponent implements AfterViewInit {
   }
 
   private compileConfigs(): object {
-    const configs = this.defaultConfigs;
+    const configs = this.defaultConfigs ?? {};
 
     if (!this.botName) {
       throw new Error('Telegram widget: bot name not present!');

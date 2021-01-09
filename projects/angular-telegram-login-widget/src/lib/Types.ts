@@ -11,9 +11,13 @@ export interface User {
 export type BUTTON_STYLE = 'medium' | 'large' | 'small';
 
 export interface WidgetConfiguration {
+  // Login button size
   buttonStyle?: BUTTON_STYLE;
+  // Show user photo near the button
   showUserPhoto?: boolean;
+  // Radius of buttons corners
   cornerRadius?: number;
+  // Request for write access
   accessToWriteMessages?: boolean
 }
 
