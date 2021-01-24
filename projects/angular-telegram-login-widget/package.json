@@ -1,11 +1,18 @@
 {
   "name": "angular-telegram-login-widget",
+  "description": "Wrapper over Telegram login widget for angular",
+  "keywords": [
+    "telegram",
+    "angular",
+    "login",
+    "widget"
+  ],
   "version": "0.2.1",
+  "homepage": "https://github.com/madmages/angular-telegram-login-widget/tree/master/projects/angular-telegram-login-widget",
+  "license": "MIT",
+  "author": "https://github.com/madmages",
   "peerDependencies": {
-    "@angular/common": "^10.1.6",
-    "@angular/core": "^10.1.6"
-  },
-  "dependencies": {
-    "tslib": "^2.0.0"
+    "@angular/common": "^10 || ^11",
+    "@angular/core": "^10 || ^11"
   }
 }

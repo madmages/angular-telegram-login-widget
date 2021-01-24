@@ -9,9 +9,10 @@ import {
   Output,
   ViewChild
 } from '@angular/core';
-import {User, WidgetConfiguration} from './Types';
 import {DOCUMENT} from '@angular/common';
+import {User, WidgetConfiguration} from './types';
 
+const TELEGRAM_WIDGET_VERSION = 14;
 const randomSeed = parseInt(`${Math.random() * 1e7}`);
 
 @Component({
@@ -33,13 +34,16 @@ export class AngularTelegramLoginWidgetComponent implements AfterViewInit {
   private readonly document: Document;
 
   private defaultConfigs = {
-    src: 'https://telegram.org/js/telegram-widget.js?14',
+    src: `https://telegram.org/js/telegram-widget.js?${TELEGRAM_WIDGET_VERSION}`,
     'data-onauth': `onTelegramLogin${randomSeed}(user)`,
     'onerror': `onTelegramWidgetLoadFail${randomSeed}()`,
     'onload': `onTelegramWidgetLoad${randomSeed}()`
   };
 
-  constructor(private ngZone: NgZone, @Inject(DOCUMENT) document: any) {
+  constructor(
+    private ngZone: NgZone,
+    @Inject(DOCUMENT) document: any
+  ) {
     this.window = window;
     this.document = document as Document
   }

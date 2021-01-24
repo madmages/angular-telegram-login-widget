@@ -3,8 +3,6 @@ import { AngularTelegramLoginWidgetComponent } from './angular-telegram-login-wi
 
 @NgModule({
   declarations: [AngularTelegramLoginWidgetComponent],
-  imports: [
-  ],
   exports: [AngularTelegramLoginWidgetComponent]
 })
 export class AngularTelegramLoginWidgetModule { }
