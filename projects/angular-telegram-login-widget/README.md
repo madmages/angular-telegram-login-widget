@@ -31,7 +31,7 @@ Configurations should set as attributes.
 | Name          | Required      | Type   |  Description  |
 | ------------- |-------------| -----|:-----|
 | botName | Yes | string | Your bot name. It's same as [Bot Username](https://core.telegram.org/widgets/login) |
-| configs | No | [WidgetConfiguration](https://github.com/madmages/angular-telegram-login-widget/blob/master/projects/angular-telegram-login-widget/src/lib/types.ts) | Other configs for button: size, corner radius, show photo, write access |
+| config | No | [WidgetConfiguration](https://github.com/madmages/angular-telegram-login-widget/blob/master/projects/angular-telegram-login-widget/src/lib/types.ts) | Other configs for button: size, corner radius, show photo, write access |
 
 ### Events
 

@@ -12,7 +12,7 @@
   "license": "MIT",
   "author": "https://github.com/madmages",
   "peerDependencies": {
-    "@angular/common": "^10 || ^11",
-    "@angular/core": "^10 || ^11"
+    "@angular/common": "^10 || ^11 || ^12 || ^13 || ^14 || ^15 || ^16",
+    "@angular/core": "^10 || ^11 || ^12 || ^13 || ^14 || ^15 || ^16"
   }
 }
