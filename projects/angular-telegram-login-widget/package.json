@@ -7,12 +7,12 @@
     "login",
     "widget"
   ],
-    "version": "0.2.3",
+    "version": "0.2.4",
   "homepage": "https://github.com/madmages/angular-telegram-login-widget/tree/master/projects/angular-telegram-login-widget",
   "license": "MIT",
   "author": "https://github.com/madmages",
   "peerDependencies": {
-    "@angular/common": "^10 || ^11 || ^12 || ^13 || ^14 || ^15 || ^16",
-    "@angular/core": "^10 || ^11 || ^12 || ^13 || ^14 || ^15 || ^16"
+    "@angular/common": ">=10",
+    "@angular/core": ">=10"
   }
 }
